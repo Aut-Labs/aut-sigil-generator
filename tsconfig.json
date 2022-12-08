@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "types": ["node"],
+    "declaration": true,
+    "lib": [
+      "es2015",
+      "dom"
+    ],
+    "module": "commonjs",
+    "strictNullChecks": false,
+    "moduleResolution": "node",
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "declarationDir": "dist",
+    "outDir": "./dist",
+    "rootDir": "src",
+    "strict": false,
+    "noImplicitUseStrict": false,
+    "typeRoots": [
+      "types.d.ts"
+  ],
+    "preserveConstEnums": false,
+    "sourceMap": true,
+    "target": "es2016",
+    "esModuleInterop": true,
+    "isolatedModules": false
+    
+  },
+  "transpileOnly": true,
+  "include": ["src"]
+}
