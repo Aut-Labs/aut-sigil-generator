@@ -98,6 +98,6 @@ export const generateAutIdDAOSigil = async (
 
   return {
     previewElement: canvas,
-    toBase64: (mimeType = "image/png") => canvas.toDataURL(),
+    toBase64: () => canvas.toDataURL(),
   } as SigilOutput;
 };
