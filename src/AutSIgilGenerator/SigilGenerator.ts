@@ -6,13 +6,12 @@ import { Hole } from "./assets/hole";
 import { randomIntFromInterval } from "./utils";
 import { drawScratch } from "./DrawScratchFunctions";
 import { drawHole } from "./DrawHoleFunctions";
-import * as fs from "fs";
-import { Blob } from "node:buffer";
+// import * as fs from "fs";
+// import { Blob } from "node:buffer";
 import { Canvas, createCanvas, loadImage } from "canvas";
 
 const drawSigil = async (ctx: CanvasRenderingContext2D, address: string) => {
   const url3 = Scratch(500, 500);
-  var buf = Buffer.from(url3, "base64");
   const url2 = Scratch(500 - 500 / 3, 500 - 500 / 3);
   const url4 = Scratch(500 + 500 / 5, 500 + 500 / 5);
   const holeUrl = Hole();
@@ -100,12 +99,5 @@ export const generateAutIdDAOSigil = async (
   return {
     previewElement: canvas,
     toBase64: (mimeType = "image/png") => canvas.toDataURL(),
-    toFile: async (filename = "sigil.png", mimeType = "image/png") => {
-      return new Promise((resolve) => {
-        const buffer = canvas.toBuffer("image/png");
-        fs.writeFileSync(`./sigil.png`, buffer, "utf-8");
-        resolve(buffer);
-      });
-    },
   } as SigilOutput;
 };
