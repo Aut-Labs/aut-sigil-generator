@@ -75,10 +75,10 @@ const drawSigil = async (ctx: CanvasRenderingContext2D, address: string) => {
       }
     }
   }
-  const firstHoleFromBase9 = parseInt(input[0]) + 1;
-  const lastHoleFromBase9 = parseInt(input[input.length - 1]) + 1;
-  drawHole(firstHoleFromBase9, ctx, hole, zoneHeight);
-  drawHole(lastHoleFromBase9, ctx, hole, zoneHeight);
+  // const firstHoleFromBase9 = parseInt(input[0]) + 1;
+  // const lastHoleFromBase9 = parseInt(input[input.length - 1]) + 1;
+  // drawHole(firstHoleFromBase9, ctx, hole, zoneHeight);
+  // drawHole(lastHoleFromBase9, ctx, hole, zoneHeight);
 };
 
 export const generateAutIdDAOSigil = async (
